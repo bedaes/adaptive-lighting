@@ -30,6 +30,7 @@
           "only_once": "Ainult üks kord, rakendub ainult valgusti sisselülitamisel",
           "prefer_rgb_color": "Eelista RGB värve, võimalusel kasuta RGB sätteid värvustemperatuuri asemel",
           "separate_turn_on_commands": "Eraldi lülitused iga valiku (värvus, heledus jne.) sisselülitamiseks, mõned valgustid vajavad seda.",
+          "separate_turn_on_commands_delay": "separate_turn_on_commands_delay, Additional delay between 'light.turn_on' commands (in milliseconds)",
           "sleep_brightness": "Unerežiimi heledus %",
           "sleep_color_temp": "Uneržiimi värvus Kelvinites",
           "sunrise_offset": "Nihe päikesetõusust, +/- sekundit",

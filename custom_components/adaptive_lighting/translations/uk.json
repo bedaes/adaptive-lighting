@@ -30,6 +30,7 @@
           "only_once": "only_once: Адаптувати світло лише після початкового увімкнення.",
           "prefer_rgb_color": "prefer_rgb_color: Використовувати 'rgb_color' замість 'color_temp', коли можливо.",
           "separate_turn_on_commands": "separate_turn_on_commands: Окремі команди для кожного атрибута (колір, яскравість, тощо.) в 'light.turn_on' (необхідні для деяких приладів).",
+          "separate_turn_on_commands_delay": "separate_turn_on_commands_delay, Additional delay between 'light.turn_on' commands (in milliseconds)",
           "sleep_brightness": "sleep_brightness: Налаштування яскравості для Режиму сну. (%)",
           "sleep_color_temp": "sleep_color_temp: Температура кольору для Режиму сну. (Кельвін)",
           "sunrise_offset": "sunrise_offset: Як за довго до(-) або після(+) визначати точку сходу сонця для циклу (+/- секунд)",

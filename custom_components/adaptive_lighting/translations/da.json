@@ -30,6 +30,7 @@
           "only_once": "only_once: Juster udelukkende lysene adaptivt i øjeblikket de tændes.",
           "prefer_rgb_color": "prefer_rgb_color: Brug 'rgb_color' istedet for 'color_temp' når muligt.",
           "separate_turn_on_commands": "separate_turn_on_commands: Adskil kommandoerne for hver attribut (color, brightness, etc.) ved 'light.turn_on' (nødvendigt for bestemte lys).",
+          "separate_turn_on_commands_delay": "separate_turn_on_commands_delay, Additional delay between 'light.turn_on' commands (in milliseconds)",
           "sleep_brightness": "sleep_brightness, Lysstyrke for Sleep Mode. (%)",
           "sleep_color_temp": "sleep_color_temp: Farvetemperatur under Sleep Mode. (Kelvin)",
           "sunrise_offset": "sunrise_offset: Hvor længe før (-) eller efter (+) at definere solopgangen i cyklussen (+/- sekunder)",

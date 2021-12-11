@@ -30,6 +30,7 @@
                "only_once":"'only_once': anvend innstillingene for adaptiv belysning kun når lysene skrus av eller på",
                "prefer_rgb_color":"'prefer_rgb_color': benytt rgb i stedet for fargetemperatur dersom det er mulig",
                "separate_turn_on_commands":"'separate_turn_on_commands': separer kommandone i 'light.turn_on' for hver attributt (farge, lysstyrke, osv.). Dette kan være nødvendig for enkelte typer lys / lyskilder",
+               "separate_turn_on_commands_delay": "separate_turn_on_commands_delay, Additional delay between 'light.turn_on' commands (in milliseconds)",
                "sleep_brightness":"'sleep_brightness': lysstyrken på lysene (i prosent) når 'sleep_mode' (søvnmodus) er aktiv",
                "sleep_color_temp":"'sleep_color_temp': fargetemperaturen på lysene (i kelvin) når 'sleep_mode' (søvnmodus) er aktiv",
                "sunrise_offset":"'sunrise_offset': hvor lenge før (-) eller etter (+) tidspunktet solen står opp (lokalt) skal defineres som soloppgang (i sekunder)",
