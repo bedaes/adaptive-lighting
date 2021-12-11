@@ -54,6 +54,8 @@ CONF_TURN_ON_LIGHTS = "turn_on_lights"
 
 TURNING_OFF_DELAY = 5
 
+"""Used if CONF_SEPARATE_TURN_ON_COMMANDS=True"""
+SEPARATE_TURN_ON_COMMANDS_DELAY = 0.25
 
 def int_between(min_int, max_int):
     """Return an integer between 'min_int' and 'max_int'."""
