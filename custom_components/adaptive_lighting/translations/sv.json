@@ -33,7 +33,6 @@
           "only_once": "only_once, Adaptivt justera endast ljuskällorna när de sätts från 'av' till 'på'",
           "prefer_rgb_color": "prefer_rgb_color, Använd 'rgb_color' över 'color_temp' om möjligt",
           "separate_turn_on_commands": "separate_turn_on_commands, for each attribute (color, brightness, etc.) in 'light.turn_on', required for some lights.",
-          "separate_turn_on_commands_delay": "separate_turn_on_commands_delay, Additional delay between 'light.turn_on' commands (in milliseconds)",
           "sleep_brightness": "sleep_brightness, i %",
           "sleep_color_temp": "sleep_color_temp, i Kelvin",
           "sunrise_offset": "sunrise_offset, i +/- sekunder",
