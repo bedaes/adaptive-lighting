@@ -70,6 +70,8 @@ adaptive_lighting:
 | take_over_control     | If another source calls `light.turn_on` while the lights are on and being adapted, disable Adaptive Lighting.                                                                                                                 | False      | True      | boolean |
 | detect_non_ha_changes | Whether to detect state changes and stop adapting lights, even not from `light.turn_on`. Needs `take_over_control` to be enabled. Note that by enabling this option, it calls 'homeassistant.update_entity' every 'interval'! | False  | False     | boolean |
 | separate_turn_on_commands | Whether to use separate `light.turn_on` calls for color and brightness, needed for some types of lights | False | False | boolean |
+| dumb_wall_switch | Whether you are using traditional (dumb) wall switches instead of smart switches | False | False | boolean |
+
 
 Full example:
 
