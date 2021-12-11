@@ -38,7 +38,8 @@
           "sunset_time": "sunset_time: Ручний перезапис часу заходу сонця, якщо 'None', тоді використовується час заходу сонця у вашій локації (HH:MM:SS)",
           "take_over_control": "take_over_control: Якщо що-небудь, окрім Адаптивного освітлення, викликає 'light.turn_on', коли світло вже увімкнено, чи адаптувати освітлення допоки світло (або перемикач) перемкнеться (off -> on).",
           "detect_non_ha_changes": "detect_non_ha_changes: виявляти всі зміни >10% до освітлення (включаючи ті, що зроблені поза HA), вимагає, щоб 'take_over_control' був включений (виклик 'homeassistant.update_entity' кожного оновлення 'interval'!)",
-          "transition": "Час переходу, який застосовується до освітлення (секунди)"
+          "transition": "Час переходу, який застосовується до освітлення (секунди)",
+          "dumb_wall_switch": "dumb_wall_switch: If traditional wall switches are used for power on/off"
         }
       }
     },

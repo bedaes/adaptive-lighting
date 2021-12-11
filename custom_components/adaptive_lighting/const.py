@@ -37,6 +37,7 @@ CONF_SUNSET_OFFSET, DEFAULT_SUNSET_OFFSET = "sunset_offset", 0
 CONF_SUNSET_TIME = "sunset_time"
 CONF_TAKE_OVER_CONTROL, DEFAULT_TAKE_OVER_CONTROL = "take_over_control", True
 CONF_TRANSITION, DEFAULT_TRANSITION = "transition", 45
+CONF_DUMB_WALL_SWITCH, DEFAULT_DUMB_WALL_SWITCH = "dumb_wall_switch", False
 
 SLEEP_MODE_SWITCH = "sleep_mode_switch"
 ADAPT_COLOR_SWITCH = "adapt_color_switch"
@@ -54,6 +55,9 @@ CONF_TURN_ON_LIGHTS = "turn_on_lights"
 
 TURNING_OFF_DELAY = 5
 
+
+"""Used if CONF_DUMB_WALL_SWITCH=True"""
+DUMB_WALL_SWITCH_POWER_ON_DELAY = 0.5
 
 def int_between(min_int, max_int):
     """Return an integer between 'min_int' and 'max_int'."""
@@ -81,6 +85,7 @@ VALIDATION_TUPLES = [
     (CONF_TAKE_OVER_CONTROL, DEFAULT_TAKE_OVER_CONTROL, bool),
     (CONF_DETECT_NON_HA_CHANGES, DEFAULT_DETECT_NON_HA_CHANGES, bool),
     (CONF_SEPARATE_TURN_ON_COMMANDS, DEFAULT_SEPARATE_TURN_ON_COMMANDS, bool),
+    (CONF_DUMB_WALL_SWITCH, DEFAULT_DUMB_WALL_SWITCH, bool),
 ]
 
 

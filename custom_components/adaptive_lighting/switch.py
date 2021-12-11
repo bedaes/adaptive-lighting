@@ -61,6 +61,7 @@ from homeassistant.const import (
     EVENT_STATE_CHANGED,
     SERVICE_TURN_OFF,
     SERVICE_TURN_ON,
+    STATE_UNAVAILABLE,
     STATE_OFF,
     STATE_ON,
     SUN_EVENT_SUNRISE,
@@ -98,6 +99,7 @@ from .const import (
     ATTR_ADAPT_COLOR,
     ATTR_TURN_ON_OFF_LISTENER,
     CONF_DETECT_NON_HA_CHANGES,
+    CONF_DUMB_WALL_SWITCH,
     CONF_INITIAL_TRANSITION,
     CONF_SLEEP_TRANSITION,
     CONF_INTERVAL,
@@ -119,6 +121,7 @@ from .const import (
     CONF_TAKE_OVER_CONTROL,
     CONF_TRANSITION,
     CONF_TURN_ON_LIGHTS,
+    DUMB_WALL_SWITCH_POWER_ON_DELAY,
     DOMAIN,
     EXTRA_VALIDATION,
     ICON,
@@ -564,6 +567,7 @@ class AdaptiveSwitch(SwitchEntity, RestoreEntity):
         self._lights = data[CONF_LIGHTS]
 
         self._detect_non_ha_changes = data[CONF_DETECT_NON_HA_CHANGES]
+        self._dumb_wall_switch = data[CONF_DUMB_WALL_SWITCH]
         self._initial_transition = data[CONF_INITIAL_TRANSITION]
         self._sleep_transition = data[CONF_SLEEP_TRANSITION]
         self._interval = data[CONF_INTERVAL]
@@ -762,6 +766,9 @@ class AdaptiveSwitch(SwitchEntity, RestoreEntity):
             transition=self._transition, force=False, context=self.create_context("interval")
         )
 
+    def _state_off(self):
+        return ( STATE_OFF, STATE_UNAVAILABLE ) if self._dumb_wall_switch else ( STATE_OFF )
+
     async def _adapt_light(
         self,
         light: str,
@@ -850,6 +857,8 @@ class AdaptiveSwitch(SwitchEntity, RestoreEntity):
             service_datas = _split_service_data(
                 service_data, adapt_brightness, adapt_color
             )
+            if self._dumb_wall_switch:
+                await asyncio.sleep(DUMB_WALL_SWITCH_POWER_ON_DELAY)
             await turn_on(service_datas[0])
             if len(service_datas) == 2:
                 transition = service_datas[0].get(ATTR_TRANSITION)
@@ -920,7 +929,7 @@ class AdaptiveSwitch(SwitchEntity, RestoreEntity):
             await self._adapt_light(light, transition, force=force, context=context)
 
     async def _sleep_mode_switch_state_event(self, event: Event) -> None:
-        if not match_switch_state_event(event, (STATE_ON, STATE_OFF)):
+        if not match_switch_state_event(event, (STATE_ON, *self._state_off())):
             return
         _LOGGER.debug(
             "%s: _sleep_mode_switch_state_event, event: '%s'", self._name, event
@@ -939,7 +948,7 @@ class AdaptiveSwitch(SwitchEntity, RestoreEntity):
         entity_id = event.data.get("entity_id")
         if (
             old_state is not None
-            and old_state.state == STATE_OFF
+            and old_state.state in self._state_off()
             and new_state is not None
             and new_state.state == STATE_ON
         ):
@@ -977,7 +986,7 @@ class AdaptiveSwitch(SwitchEntity, RestoreEntity):
             old_state is not None
             and old_state.state == STATE_ON
             and new_state is not None
-            and new_state.state == STATE_OFF
+            and new_state.state in self._state_off()
         ):
             # Tracks 'off' → 'on' state changes
             self._on_to_off_event[entity_id] = event

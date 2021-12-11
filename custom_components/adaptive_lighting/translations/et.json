@@ -38,7 +38,8 @@
           "sunset_time": "Päikeseloojangu aeg 'HH:MM:SS' vormingus. (Kui jätta tühjaks kasutatakse asukohajärgset)",
           "take_over_control": "Käsitsi juhtimine: kui miski peale kohanduva valguse enda lültiab valgusti sisse ja see juba põleb, katkesta kohandamine kuni järgmise välise lülitamiseni.",
           "detect_non_ha_changes": "Märka väliseid lülitusi: kui mõni säte muutub üle 10% (isegi väljaspoolt HA juhituna) siis peab käsitsi juhtimine olema lubatud (kutsutakse 'homeassistant.update_entity')'interval'!)",
-          "transition": "Üleminekud, sekundites"
+          "transition": "Üleminekud, sekundites",
+          "dumb_wall_switch": "dumb_wall_switch: If traditional wall switches are used for power on/off"
         }
       }
     },

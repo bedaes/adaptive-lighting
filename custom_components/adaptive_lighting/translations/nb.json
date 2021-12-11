@@ -38,7 +38,8 @@
                "sunset_time":"'sunset_time': definer tidspunktet for solnedgang manuelt (i følgende format: TT:MM:SS - f. eks: '20:30:00' vil definere tidspunktet for solnegang som halv-ni på kvelden)",
                "take_over_control":"'take_over_control': dersom en annen tjeneste enn adaptiv belysning skrur lysene av eller på, vil automatisk adaptering av lyset stoppes inntil lyset (eller den tilhørende bryteren for adaptiv belysning) blir slått av - og på igjen",
                "detect_non_ha_changes":"'detect_non_ha_changes': registrerer alle endringer i lysstyrke over 10% med opprinnelse utenfor Home Assistant - krever at 'take_over_control' er aktivert (OBS: tilkaller 'homeassistant.update_entity' ved hvert 'interval'!)",
-               "transition":"'transition': varigheten (i sekunder) på overgangen når lysene oppdateres "
+               "transition":"'transition': varigheten (i sekunder) på overgangen når lysene oppdateres ",
+               "dumb_wall_switch": "dumb_wall_switch: If traditional wall switches are used for power on/off"
             }
          }
       },
