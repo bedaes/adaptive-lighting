@@ -61,6 +61,9 @@ SEPARATE_TURN_ON_COMMANDS_DELAY = 0.25
 """Used if CONF_DUMB_WALL_SWITCH=True"""
 DUMB_WALL_SWITCH_POWER_ON_DELAY = 0.5
 
+"""Used if CONF_DUMB_WALL_SWITCH=True"""
+DUMB_WALL_SWITCH_POWER_ON_DELAY = 0.5
+
 def int_between(min_int, max_int):
     """Return an integer between 'min_int' and 'max_int'."""
     return vol.All(vol.Coerce(int), vol.Range(min=min_int, max=max_int))
