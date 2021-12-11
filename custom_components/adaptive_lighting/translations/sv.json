@@ -41,7 +41,8 @@
           "sunset_time": "sunset_time, i 'HH:MM:SS' format (om 'None', används den faktiskta solnedgången för din position)",
           "take_over_control": "take_over_control, om något utöver 'Adaptiv Ljussättning' komponenten kallar på 'light.turn_on' när en ljuskälla redan är på, stängs den adaptiva justeringen av tills ljuskällan stängs av -> på igen, alternativt switchen för konfigurationen",
           "detect_non_ha_changes": "detect_non_ha_changes, Upptäcker alla ändringar större än 5% gjorda på ljuskällorna som inte kommer från HA. Kräver att 'take_over_control' är påslaget.(Kallar på 'homeassistant.update_entity' vid varje 'interval'!)",
-          "transition": "transition, i sekunder"
+          "transition": "transition, i sekunder",
+          "dumb_wall_switch": "dumb_wall_switch: If traditional wall switches are used for power on/off"
         }
       }
     },

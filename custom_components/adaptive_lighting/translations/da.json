@@ -38,7 +38,8 @@
           "sunset_time": "sunset_time: Manuel overstyring af solnedgangstidspunktet, hvis 'None', bruges det egentlige tidspunkt for din lokation. (HH:MM:SS)",
           "take_over_control": "take_over_control: Hvis andet end Adaptiv Belysning kalder 'light.turn_on' på et lys der allerede er tændt, afbryd adaptering af lyset indtil at det tændes igen.",
           "detect_non_ha_changes": "detect_non_ha_changes: Registrer alle ændringer på >10% på et lys (også udenfor HA), kræver at 'take_over_control' er slået til (kalder 'homeassistant.update_entity' hvert 'interval'!)",
-          "transition": "Overgangsperiode når en ændring i lyset udføres (i sekunder)"
+          "transition": "Overgangsperiode når en ændring i lyset udføres (i sekunder)",
+          "dumb_wall_switch": "dumb_wall_switch: If traditional wall switches are used for power on/off"
         }
       }
     },
