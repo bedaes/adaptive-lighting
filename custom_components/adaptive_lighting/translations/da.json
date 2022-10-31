@@ -44,7 +44,8 @@
       }
     },
     "error": {
-      "option_error": "Ugyldig indstilling"
+      "option_error": "Ugyldig indstilling",
+      "entity_missing": "Et udvalgt lys blev ikke fundet "
     }
   }
 }
